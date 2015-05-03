@@ -35,6 +35,9 @@
         function callFactory(params) {
             if(!params) return;
 
+            // take out county code, because geo bytes use incorect county codes for some countrys
+            params = params.replace(/[A-Z]{2}\b\,/g, '').trim();
+
             weatherFactory
                 .triggerLoadingIndicator(true);
 

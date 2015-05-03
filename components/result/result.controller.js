@@ -61,7 +61,6 @@
          function updateListener( event, data ) {           
            this.hideForecast = false;
            if(data) init();
-
         }
 
         /**

@@ -14,7 +14,7 @@
     function weatherLoading() {
         var directive = {
           link: link,
-          template: //@todo change with url's   
+          template: //@todo change with templateUrl   
           '<div class="square-loader" ng-if="vm.loading"><div class="square-loader-inner"><span class="glyphicon glyphicon-cloud"></span></div></div>', 
           restrict: 'EA',
           controller: loadingController,
