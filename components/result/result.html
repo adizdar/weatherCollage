@@ -1,0 +1,10 @@
+
+<div class="weather-result-container" ng-if="resultCtrl.hideForecast" 
+     ng-class="{animated: resultCtrl.hideForecast, bounceIn: resultCtrl.hideForecast}">
+    <carousel interval="myInterval">
+        <slide ng-repeat="slide in resultCtrl.forecast" active="slide.active">
+            <div weather-result weather="slide" city="resultCtrl.city" active="slide.active">
+            </div>
+        </slide>
+    </carousel>
+</div>

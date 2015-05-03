@@ -1,0 +1,10 @@
+<div class="row weather-result-row">
+    <div class="col-xs-6 weather-col-icon">
+        <p class="{{result.addIconViaId(weather.weather[0].id)}} weather-result-icon"></p>
+    </div>
+    <div class="col-xs-5">
+        <p class="weather-result-temp">{{weather.temp.min|number:0}}&deg; / {{weather.temp.max|number:0}}&deg;</p>
+        <span class="weather-result-info">{{city.name}}</span>
+        <span class="weather-result-info">{{result.convertUnixDate(weather.dt)}}</span>
+    </div>
+</div>

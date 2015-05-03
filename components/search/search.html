@@ -1,0 +1,19 @@
+<div class="weather-search-container row"
+     ng-mouseenter="searchCtrl.isSearchVisible = true"
+     ng-class="{animated: !searchCtrl.isSearchVisible,
+               rubberBand: !searchCtrl.isSearchVisible}">
+
+    <input type="text" 
+           class="col-sm-10 col-xs-10 animated rubberBand" 
+           placeholder="Enter city name" 
+           typeahead="country for country in searchCtrl.countryList | limitTo:8" 
+           ng-model="searchCtrl.searchString" 
+           ng-change="searchCtrl.autoCompleate(searchCtrl.searchString)" 
+           ng-show="searchCtrl.isSearchVisible"
+           >
+
+    <span class="glyphicon glyphicon-search col-sm-2 col-xs-2"
+          ng-click="searchCtrl.isSearchVisible = false; searchCtrl.callFactory(searchCtrl.searchString)">
+    </span>
+
+</div>

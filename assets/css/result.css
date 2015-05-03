@@ -1,0 +1,112 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+
+/*
+NOTES      result.html specific css file     
+RESET      none
+OVERRIDE   angular ui-carousel
+SHARED     cross element sharing, not unique to one section, example: a,.test,h1,h2 { ... }
+MAIN       result:ui-view, weather-result: shared, active, deactivate
+*/
+
+/*------------------------------------*\
+    $OVERRIDE
+\*------------------------------------*/
+
+/**
+ * $CAROUSEL_ANGULAR_UI : OVERRIDE
+ */
+
+.carousel-indicators {
+  top: 12em;
+}
+
+.carousel-control.right {
+  background-image: none;
+}
+
+.carousel-control.left {
+  background-image: none;
+}
+
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+
+/** 
+ * $RESULT UI-VIEW
+ */
+
+.result {
+  height: 100%;
+}
+
+/**
+ * $WEATHER_RESULT
+ */
+
+.weather-result-container {
+  left: 0;
+  margin: auto;
+  max-width: 40em;
+  min-width: 30em;
+  position: absolute;
+  right: 0;
+  top: 40%;
+  width: 30%;
+}
+
+/**
+ * $WEATHER_RESULT ACTIVE
+ */
+
+.weather-result-row {
+  margin: auto;
+}
+
+.weather-col-icon {
+  border-right: 1px solid rgba(255, 255, 255, .5);
+  text-align: right;
+}
+
+.weather-result-icon {
+  color: white;
+  font-size: 9em;
+  line-height: 1.1;
+  padding-right: 0.13em;
+}
+
+.weather-result-temp {
+  clear: right;
+  color: white;
+  font-size: 2em;
+  padding: 1.1em 0 0.3em 0.4em;
+  text-align: left;
+}
+
+.weather-result-info {
+  color: white;
+  display: block;
+  opacity: 0.7;
+  padding-left: 0.8em;
+  text-align: left;
+}
+
+/**
+ * $WEATHER_RESULT DEACTIVE
+ */
+
+.weather-result-deactivate {
+  border: none;
+  opacity: 0.3;
+}
+
+/**
+ * $WEATHER_RESULT : EVENTS
+ */
+
+.weather-result-icon:before {
+    font-size: 0.8em;
+}
+

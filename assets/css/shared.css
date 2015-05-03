@@ -1,0 +1,196 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/*
+NOTES      shared css file acros application 
+RESET      none
+SHARED     cross element sharing, not unique to one section, example: a,.test,h1,h2 { ... } 
+ANIMATION  loaders
+*/
+
+/*------------------------------------*\
+    $SHARED
+\*------------------------------------*/
+
+html,body {
+  height: 100%;
+}
+
+body {
+    background-color: #52b3d9;
+}
+
+footer {
+  bottom: 0.9em;
+  color: white;
+  font-size: 1.4em;
+  position: absolute;
+  right: 1.4em;
+}
+
+footer > a {
+  color: inherit;
+  font-weight: bold;
+}
+
+footer > span {
+  opacity: 0.8;
+}
+
+footer > a:hover {
+  color: white;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+    
+/*------------------------------------*\
+    $ANIMATION
+\*------------------------------------*/
+
+.spinner {
+  background-color: #FFF;
+  border-radius: 100%;  
+  height: 5em;
+  margin: 20% auto;
+  width: 5em;
+
+  -webkit-animation: scaleout 1.0s infinite ease-in-out;
+  -moz-animation: scaleout 1.0s infinite ease-in-out;
+  -ms-animation: scaleout 1.0s infinite ease-in-out;
+  -o-animation: scaleout 1.0s infinite ease-in-out;
+  animation: scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes scaleout {
+  0% { -webkit-transform: scale(0.0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes scaleout {
+  0% { -webkit-transform: scale(0.0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes scaleout {
+  0% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 100% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+/*Contribute: http://tobiasahlin.com/spinkit/*/
+
+
+/**
+  * Roator
+  */
+
+.square-loader {
+  border: 4px solid white;
+  height: 40px;
+  left: 50%;
+  position: absolute;
+  width: 40px;
+  top: 30%;
+
+  -webkit-animation: roator 2.0s infinite ease-out;
+  -moz-animation: roator 2.0s infinite ease-out;
+  -ms-animation: roator 2.0s infinite ease-out;
+  -o-animation: roator 2.0s infinite ease-out;
+  animation: roator 2.0s infinite ease-out;
+}
+
+@-webkit-keyframes roator {
+  0% { -webkit-transform: rotate(0deg) }
+  25% { -webkit-transform: rotate(180deg) }
+  50% { -webkit-transform: rotate(180deg) }
+  75% { -webkit-transform: rotate(360deg) }
+  100% {
+   -webkit-transform: rotate(360deg);
+}
+}
+
+@-moz-keyframes roator {
+  0% { -moz-transform: rotate(0deg) }
+  25% { -moz-transform: rotate(180deg) }
+  50% { -moz-transform: rotate(180deg) }
+  75% { -moz-transform: rotate(360deg) }
+  100% {
+    -webkit-transform: rotate(360deg);
+}
+}
+
+@keyframes roator {
+  0% { transform: rotate(0deg) }
+  25% { transform: rotate(180deg) }
+  50% { transform: rotate(180deg) }
+  75% { transform: rotate(360deg) }
+  100% {
+    -webkit-transform: rotate(360deg);
+}
+}
+
+/**
+  * Roator: backgroundFill
+  */
+
+.square-loader-inner {
+  background-color: #fff;
+
+  -webkit-animation: backgroundFill 2.0s infinite ease-in;
+  -moz-animation: backgroundFill 2.0s infinite ease-in;
+  -ms-animation: backgroundFill 2.0s infinite ease-in;
+  -o-animation: backgroundFill 2.0s infinite ease-in;
+  animation: backgroundFill 2.0s infinite ease-in;
+}
+
+.square-loader-inner > span {
+  color: white;
+  font-size: 22px;
+  margin-left: 6px;
+  margin-top: 7px;
+}
+
+@-webkit-keyframes backgroundFill {
+  0% { height: 0; }
+  25% { height: 0; }
+  50% { height: 100%; }
+  75% { height: 100%; }
+  100% {
+   height: 0;
+}
+}
+
+@-moz-keyframes backgroundFill {
+  0% { height: 0; }
+  25% { height: 0; }
+  50% { height: 100%; }
+  75% { height: 100%; }
+  100% {
+   height: 0;
+}
+}
+
+@keyframes backgroundFill {
+  0% { height: 0; }
+  25% { height: 0; }
+  50% { height: 100%; }
+  75% { height: 100%; }
+  100% {
+   height: 0;
+}
+}
+
+
+
